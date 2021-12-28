@@ -5,7 +5,6 @@ let spanTwo = document.querySelector('.harmburger-btn > span:nth-child(2)');
 let spanThree = document.querySelector('.harmburger-btn > span:last-child');
 let dropDown = document.querySelector('#mobile__drop-down');
 
-console.log(dropDown.classList.length === 0)
 harm_btn.addEventListener('click', (evt) => {
     if (dropDown.classList.length === 0 || dropDown.classList.contains('dropDownReturn')) {
         //remove existing return state animation class, if present

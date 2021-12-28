@@ -38,9 +38,15 @@ body {
 
 .button {
   display: inline-block;
-  padding: 1rem;
+  padding: 0.9375rem 0rem;
   background-color: #2acfcf;
   border-radius: 30px;
+  text-align: center;
+}
+
+.button:hover {
+  color: white;
+  opacity: 0.6;
 }
 
 .header {
@@ -91,6 +97,10 @@ body {
   margin: 0;
 }
 
+.header #desktop__navigation-menu {
+  display: none;
+}
+
 .header #mobile__drop-down {
   padding: 0;
   margin: 0;
@@ -112,8 +122,16 @@ body {
   font-size: 1rem;
 }
 
+.header #mobile__drop-down ul li a:hover {
+  color: #bfbfbf;
+}
+
 .header #mobile__drop-down ul li .button {
   width: 85%;
+}
+
+.header #mobile__drop-down ul li .button:hover {
+  color: white;
 }
 
 .header #mobile__drop-down ul hr {
@@ -124,9 +142,48 @@ body {
 }
 
 @media only screen and (min-width: 785px) {
+  .header {
+    padding-top: 3.125rem;
+  }
   .header img {
     height: 2.5rem;
     width: auto;
+  }
+  .header #mobile__drop-down, .header .harmburger-btn {
+    display: none;
+  }
+  .header #desktop__navigation-menu {
+    display: block;
+    padding-left: 3.125rem;
+    width: 100%;
+  }
+  .header #desktop__navigation-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+  .header #desktop__navigation-menu ul li a {
+    color: #9e9aa7;
+    font-weight: 700;
+  }
+  .header #desktop__navigation-menu ul li a:hover {
+    color: #232127;
+  }
+  .header #desktop__navigation-menu ul li .button {
+    color: white;
+    width: 6.875rem;
+  }
+  .header #desktop__navigation-menu ul li .button:hover {
+    color: white;
+    opacity: 0.6;
+  }
+  .header #desktop__navigation-menu ul li:nth-child(3) {
+    margin-right: auto;
   }
 }
 
@@ -146,8 +203,8 @@ body {
 }
 
 .dropDownEnd {
-  -webkit-animation: dropDownEnd 700ms ease-in-out 150ms forwards;
-          animation: dropDownEnd 700ms ease-in-out 150ms forwards;
+  -webkit-animation: dropDownEnd 600ms ease-in-out 150ms forwards;
+          animation: dropDownEnd 600ms ease-in-out 150ms forwards;
 }
 
 .spanOneReturn {

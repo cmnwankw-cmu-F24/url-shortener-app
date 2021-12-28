@@ -31,13 +31,10 @@
       padding: 0;
       margin: 0;
     }
+  }
 
-    span:first-child {
-    }
-    span:nth-child(2) {
-    }
-    span:last-child {
-    }
+  #desktop__navigation-menu{
+      display:none;
   }
 
   #mobile__drop-down {
@@ -57,9 +54,15 @@
         a {
           color: white;
           font-size: 1rem;
+          &:hover{
+              color: $gray;
+          }
         }
         .button {
           width: 85%;
+          &:hover{
+            color: white;
+        }
         }
       }
 
@@ -72,11 +75,51 @@
     }
   }
 }
+
+//media queries for tablet, desktop
 @media only screen and (min-width: 785px){
+
     .header{
+        padding-top: 3.125rem;
         img{
             height: 2.5rem;
             width: auto;
+        }
+        #mobile__drop-down, .harmburger-btn{
+            display: none;
+           
+        }
+        #desktop__navigation-menu{
+            display:block;
+            padding-left: 3.125rem;
+            width: 100%;
+            ul{
+                display: flex;
+                align-items: center;
+                column-gap: 1.875rem;
+                li{
+                    a{
+                        color:$grayishViolet;
+                        font-weight: 700;
+                       &:hover{
+                        color: $veryDarkViolet;
+                       }
+                    }
+                    .button{
+                        color:white;
+                        width: 6.875rem;
+                        &:hover{
+                            color:white;
+                            opacity: 0.6;
+                        }
+                        
+                    }
+                   
+                }
+                li:nth-child(3){
+                    margin-right: auto;
+                }
+            }
         }
     }
 }
@@ -92,7 +135,7 @@
     animation: spanThreeEnd 200ms ease-in-out forwards;
 }
 .dropDownEnd{
-    animation: dropDownEnd 700ms ease-in-out 150ms forwards;
+    animation: dropDownEnd 600ms ease-in-out 150ms forwards;
 }
 
 .spanOneReturn{
