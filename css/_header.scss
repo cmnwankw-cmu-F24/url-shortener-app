@@ -1,5 +1,5 @@
 .header {
-  padding: 2.5rem 0rem 1.25rem;
+  padding: 2.5rem 0rem 1.875rem;
   background-color: white;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
 @media only screen and (min-width: 785px){
 
     .header{
-        padding-top: 3.125rem;
+        padding: 3.125rem 0rem 5rem;
         img{
             height: 2.5rem;
             width: auto;
