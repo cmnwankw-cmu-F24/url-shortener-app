@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #bfbfbf;
+}
+
+.container {
+  width: 85%;
+  max-width: 1112px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #2acfcf;
+  border-radius: 30px;
+}
+
+.header {
+  padding: 2.5rem 0rem 1.25rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header img {
+  height: 1.875rem;
+  width: auto;
+}
+
+.header .harmburger-btn {
+  margin-left: auto;
+  height: 1.5rem;
+  width: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .harmburger-btn:hover {
+  cursor: pointer;
+}
+
+.header .harmburger-btn span {
+  display: inline-block;
+  width: 1.5625rem;
+  height: 0.25rem;
+  background-color: #bfbfbf;
+  padding: 0;
+  margin: 0;
+}
+
+.header #mobile__drop-down {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #3b3054;
+  border-radius: 10px;
+  position: absolute;
+  top: 5.5rem;
+  left: -150%;
+}
+
+.header #mobile__drop-down ul li {
+  text-align: center;
+  margin: 2.5rem 0rem;
+}
+
+.header #mobile__drop-down ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
+.header #mobile__drop-down ul li .button {
+  width: 85%;
+}
+
+.header #mobile__drop-down ul hr {
+  width: 90%;
+  margin: 0 auto;
+  color: #9e9aa7;
+  height: 1px;
+}
+
+@media only screen and (min-width: 785px) {
+  .header img {
+    height: 2.5rem;
+    width: auto;
+  }
+}
+
+.spanOneEnd {
+  -webkit-animation: spanOneEnd 200ms ease-in-out forwards;
+          animation: spanOneEnd 200ms ease-in-out forwards;
+}
+
+.spanTwoEnd {
+  -webkit-animation: spanTwoEnd 200ms ease-in-out forwards;
+          animation: spanTwoEnd 200ms ease-in-out forwards;
+}
+
+.spanThreeEnd {
+  -webkit-animation: spanThreeEnd 200ms ease-in-out forwards;
+          animation: spanThreeEnd 200ms ease-in-out forwards;
+}
+
+.dropDownEnd {
+  -webkit-animation: dropDownEnd 700ms ease-in-out 150ms forwards;
+          animation: dropDownEnd 700ms ease-in-out 150ms forwards;
+}
+
+.spanOneReturn {
+  -webkit-animation: spanOneReturn 700ms ease-in-out forwards;
+          animation: spanOneReturn 700ms ease-in-out forwards;
+}
+
+.spanTwoReturn {
+  -webkit-animation: spanTwoReturn 700ms ease-in-out forwards;
+          animation: spanTwoReturn 700ms ease-in-out forwards;
+}
+
+.spanThreeReturn {
+  -webkit-animation: spanThreeReturn 700ms ease-in-out forwards;
+          animation: spanThreeReturn 700ms ease-in-out forwards;
+}
+
+.dropDownReturn {
+  -webkit-animation: dropDownReturn 700ms ease-in-out forwards;
+          animation: dropDownReturn 700ms ease-in-out forwards;
+}
+
+@-webkit-keyframes spanOneEnd {
+  from {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateY(240%) rotate(45deg);
+            transform: translateY(240%) rotate(45deg);
+  }
+}
+
+@keyframes spanOneEnd {
+  from {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateY(240%) rotate(45deg);
+            transform: translateY(240%) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes spanTwoEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spanTwoEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spanThreeEnd {
+  from {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateY(-240%) rotate(-45deg);
+            transform: translateY(-240%) rotate(-45deg);
+  }
+}
+
+@keyframes spanThreeEnd {
+  from {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateY(-240%) rotate(-45deg);
+            transform: translateY(-240%) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes dropDownEnd {
+  from {
+    left: -150%;
+    -webkit-transform: none;
+            transform: none;
+  }
+  to {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes dropDownEnd {
+  from {
+    left: -150%;
+    -webkit-transform: none;
+            transform: none;
+  }
+  to {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes spanOneReturn {
+  from {
+    -webkit-transform: translateY(240%) rotate(45deg);
+            transform: translateY(240%) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@keyframes spanOneReturn {
+  from {
+    -webkit-transform: translateY(240%) rotate(45deg);
+            transform: translateY(240%) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes spanTwoReturn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spanTwoReturn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spanThreeReturn {
+  from {
+    -webkit-transform: translateY(-240%) rotate(-45deg);
+            transform: translateY(-240%) rotate(-45deg);
+  }
+  to {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@keyframes spanThreeReturn {
+  from {
+    -webkit-transform: translateY(-240%) rotate(-45deg);
+            transform: translateY(-240%) rotate(-45deg);
+  }
+  to {
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes dropDownReturn {
+  from {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    left: -150%;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes dropDownReturn {
+  from {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    left: -150%;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

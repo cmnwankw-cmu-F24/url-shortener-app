@@ -1,0 +1,189 @@
+.header {
+  padding: 2.5rem 0rem 1.25rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  img {
+    height: 1.875rem;
+    width: auto;
+  }
+
+  .harmburger-btn {
+    margin-left: auto;
+    height: 1.5rem;
+    width: 1.5625rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      display: inline-block;
+      width: 1.5625rem;
+      height: 0.25rem;
+      background-color: $gray;
+      padding: 0;
+      margin: 0;
+    }
+
+    span:first-child {
+    }
+    span:nth-child(2) {
+    }
+    span:last-child {
+    }
+  }
+
+  #mobile__drop-down {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: $darkViolet;
+    border-radius: 10px;
+    position: absolute;
+    top: 5.5rem;
+    left: -150%;
+
+    ul {
+      li {
+        text-align: center;
+        margin: 2.5rem 0rem;
+        a {
+          color: white;
+          font-size: 1rem;
+        }
+        .button {
+          width: 85%;
+        }
+      }
+
+      hr {
+        width: 90%;
+        margin: 0 auto;
+        color: $grayishViolet;
+        height: 1px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 785px){
+    .header{
+        img{
+            height: 2.5rem;
+            width: auto;
+        }
+    }
+}
+
+//animate classes
+.spanOneEnd{
+    animation: spanOneEnd 200ms ease-in-out forwards;
+}
+.spanTwoEnd{
+    animation: spanTwoEnd 200ms ease-in-out forwards;
+}
+.spanThreeEnd{
+    animation: spanThreeEnd 200ms ease-in-out forwards;
+}
+.dropDownEnd{
+    animation: dropDownEnd 700ms ease-in-out 150ms forwards;
+}
+
+.spanOneReturn{
+    animation: spanOneReturn 700ms ease-in-out forwards;
+}
+.spanTwoReturn{
+    animation: spanTwoReturn 700ms ease-in-out forwards;
+}
+.spanThreeReturn{
+    animation: spanThreeReturn 700ms ease-in-out forwards;
+}
+.dropDownReturn{
+    animation: dropDownReturn 700ms ease-in-out forwards;
+}
+
+//end state keyframes
+@keyframes spanOneEnd {
+  from {
+    transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    transform: translateY(240%) rotate(45deg);
+  }
+}
+
+@keyframes spanTwoEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spanThreeEnd {
+  from {
+    transform: translateY(0%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-240%) rotate(-45deg);
+  }
+}
+
+@keyframes dropDownEnd {
+  from {
+    left: -150%;
+    transform: none;
+  }
+  to {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+//return state for keyframes
+@keyframes spanOneReturn {
+  from {
+    transform: translateY(240%) rotate(45deg);
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@keyframes spanTwoReturn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spanThreeReturn {
+  from {
+    transform: translateY(-240%) rotate(-45deg);
+    
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+
+@keyframes dropDownReturn{
+  from {
+    left: 50%;
+    transform: translateX(-50%);
+   
+  }
+  to {
+    left: -150%;
+    transform: none;
+  }
+}
