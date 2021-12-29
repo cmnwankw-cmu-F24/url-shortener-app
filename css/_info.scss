@@ -1,0 +1,131 @@
+.info{
+    width: 100%;
+    background-color: #f3f3f3;
+    padding-top: 7.5rem;
+
+    h2,h3{
+        color: $veryDarkViolet;
+    }
+
+    .container{
+        .result{
+            width: 100%;
+            margin-bottom:  5.625rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 1.5rem;
+            align-items: center;
+            &__tab{
+                width: 100%;
+                background-color: white;
+                padding: 1rem;
+                border-radius: 5px;
+
+                .long_link{
+                    display: inline-block;
+                    width: 100%;
+                    color: $veryDarkViolet;
+                    overflow-x: hidden;
+                    padding: 0rem 0rem 1rem ;
+                    font-size: 1rem;
+                    border-bottom: 1px solid $gray;
+                }
+                .short_link{
+                    display: inline-block;
+                    color: $cyan;
+                    width:100%;
+                    overflow-x: hidden;
+                    padding: 1rem 0rem;
+                    font-size: 1rem;
+                }
+                .copy_btn{
+                    background-color: $cyan;
+                    width: 100%;
+                    color: white;
+                    padding: 1rem 0rem;
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    transition: all 150ms ease-in-out;
+                    &:hover{
+                        cursor: pointer;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+        }
+
+        .info__main{
+            width: 100%;
+            max-width:475px;
+            margin: 0 auto;
+            text-align: center;
+            h2{
+                font-weight: 700;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 0.875rem;
+                padding: 0;
+            }
+        }
+    }
+   
+}
+
+@media only screen and (min-width: 631px){
+
+    .info{
+
+    
+        .container{
+            .result{
+                &__tab{
+                   display: flex;
+                   width: min-content;
+                   align-items: center;
+                   column-gap: 2.25rem;
+                   width: 100%;
+    
+                    .long_link{
+                        padding: 0rem;
+                        width:max-content;
+                        font-size: 1.25rem;
+                        border: none;
+                        
+                    }
+                    .short_link{
+                        flex-shrink: 0;
+                        width: max-content;
+                        margin-left: auto;
+                        padding: 0rem;
+                        font-size: 1.25rem;
+                    }
+                    .copy_btn{
+                        width: 6.25rem;
+                        flex-shrink: 0;
+    
+                    }
+                }
+    
+            }
+    
+            .info__main{
+                
+                h2{
+                    font-size: 1.875rem;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: 1rem;
+                    padding: 0;
+                }
+            }
+        }
+       
+    }
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -41,9 +41,11 @@ body {
   display: inline-block;
   padding: 0.9375rem 0rem;
   background-color: #2acfcf;
+  border: none;
   border-radius: 30px;
   text-align: center;
   width: 12.5rem;
+  font-weight: 700;
 }
 
 .button:hover {
@@ -112,6 +114,7 @@ body {
   position: absolute;
   top: 5.5rem;
   left: -150%;
+  z-index: 10;
 }
 
 .header #mobile__drop-down ul li {
@@ -190,23 +193,23 @@ body {
 }
 
 .spanOneEnd {
-  -webkit-animation: spanOneEnd 200ms ease-in-out forwards;
-          animation: spanOneEnd 200ms ease-in-out forwards;
+  -webkit-animation: spanOneEnd 150ms ease-in-out forwards;
+          animation: spanOneEnd 150ms ease-in-out forwards;
 }
 
 .spanTwoEnd {
-  -webkit-animation: spanTwoEnd 200ms ease-in-out forwards;
-          animation: spanTwoEnd 200ms ease-in-out forwards;
+  -webkit-animation: spanTwoEnd 150ms ease-in-out forwards;
+          animation: spanTwoEnd 150ms ease-in-out forwards;
 }
 
 .spanThreeEnd {
-  -webkit-animation: spanThreeEnd 200ms ease-in-out forwards;
-          animation: spanThreeEnd 200ms ease-in-out forwards;
+  -webkit-animation: spanThreeEnd 150ms ease-in-out forwards;
+          animation: spanThreeEnd 150ms ease-in-out forwards;
 }
 
 .dropDownEnd {
-  -webkit-animation: dropDownEnd 600ms ease-in-out 150ms forwards;
-          animation: dropDownEnd 600ms ease-in-out 150ms forwards;
+  -webkit-animation: dropDownEnd 600ms ease-in-out 50ms forwards;
+          animation: dropDownEnd 600ms ease-in-out 50ms forwards;
 }
 
 .spanOneReturn {
@@ -413,7 +416,8 @@ body {
   -ms-grid-columns: 1fr;
       grid-template: 1fr 1fr/ 1fr;
       grid-template-areas: "img" "content";
-  padding-bottom: 10.625rem;
+  padding-bottom: 9.375rem;
+  position: relative;
 }
 
 .hero__image {
@@ -451,13 +455,74 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.hero .shortener {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  width: 85%;
+  max-width: 1112px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1.5625rem;
+  background-color: #3b3054;
+  background-image: url("../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50px -55px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.hero .shortener__input {
+  width: 100%;
+  grid-area: input;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #bfbfbf;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero .shortener__input:focus {
+  outline: 2px solid #805580;
+}
+
+.hero .shortener__error {
+  display: inline-block;
+  grid-area: error;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #f46262;
+  margin: 0.3125rem 0rem 0.9375rem;
+}
+
+.hero .shortener__btn {
+  width: 100%;
+  grid-area: btn;
+  padding: 0.9375rem 0rem;
+  background-color: #2acfcf;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero .shortener__btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 @media only screen and (min-width: 631px) {
   .hero {
     width: 100%;
     height: 40rem;
     padding-bottom: 9.375rem;
     display: block;
-    position: relative;
   }
   .hero .container {
     height: 100%;
@@ -495,6 +560,23 @@ body {
     height: 60%;
     background-position: 10px 0px;
   }
+  .hero .shortener {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+    -ms-grid-rows: 2fr 0.5fr;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template: 2fr 0.5fr/3fr 1fr;
+        grid-template-areas: "input btn" "error error";
+    background-image: url("../images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 @media only screen and (min-width: 1133px) {
@@ -508,9 +590,149 @@ body {
     font-size: 1.25rem;
   }
   .hero__image {
-    width: 45%;
-    height: 100%;
-    background-position: 2px 0px;
+    width: 50%;
+    height: 87%;
+    background-position: 10px 0px;
+  }
+  .hero .shortener {
+    -ms-grid-rows: 2fr 0.5fr;
+    -ms-grid-columns: 4fr 1fr;
+        grid-template: 2fr 0.5fr/4fr 1fr;
+        grid-template-areas: "input btn" "error error";
+  }
+}
+
+.info {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-top: 7.5rem;
+}
+
+.info h2, .info h3 {
+  color: #232127;
+}
+
+.info .container .result {
+  width: 100%;
+  margin-bottom: 5.625rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info .container .result__tab {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.info .container .result__tab .long_link {
+  display: inline-block;
+  width: 100%;
+  color: #232127;
+  overflow-x: hidden;
+  padding: 0rem 0rem 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.info .container .result__tab .short_link {
+  display: inline-block;
+  color: #2acfcf;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+}
+
+.info .container .result__tab .copy_btn {
+  background-color: #2acfcf;
+  width: 100%;
+  color: white;
+  padding: 1rem 0rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.info .container .result__tab .copy_btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.info .container .info__main {
+  width: 100%;
+  max-width: 475px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info .container .info__main h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info .container .info__main p {
+  font-size: 0.875rem;
+  padding: 0;
+}
+
+@media only screen and (min-width: 631px) {
+  .info .container .result__tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 2.25rem;
+            column-gap: 2.25rem;
+    width: 100%;
+  }
+  .info .container .result__tab .long_link {
+    padding: 0rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 1.25rem;
+    border: none;
+  }
+  .info .container .result__tab .short_link {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+    padding: 0rem;
+    font-size: 1.25rem;
+  }
+  .info .container .result__tab .copy_btn {
+    width: 6.25rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .info .container .info__main h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+  .info .container .info__main p {
+    font-size: 1rem;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
