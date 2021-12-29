@@ -880,4 +880,199 @@ body {
     left: 84%;
   }
 }
+
+.cta {
+  width: 100%;
+  height: 17.1875rem;
+  background-color: #3b3054;
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cta h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+
+.cta a:hover {
+  opacity: 0.9;
+}
+
+@media only screen and (min-width: 631px) {
+  .cta {
+    background-image: url("../images/bg-boost-desktop.svg");
+  }
+  .cta h3 {
+    font-size: 2.25rem;
+  }
+}
+
+.footer {
+  background-color: #232127;
+  text-align: center;
+  padding: 3.125rem 0rem;
+}
+
+.footer .container .footer__logo {
+  height: 1.875rem;
+  margin-bottom: 3.125rem;
+}
+
+.footer .container .footer__features,
+.footer .container .footer__resources,
+.footer .container .footer__company {
+  margin-bottom: 3.125rem;
+}
+
+.footer .container .footer__features li,
+.footer .container .footer__resources li,
+.footer .container .footer__company li {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.footer .container .footer__features li a,
+.footer .container .footer__resources li a,
+.footer .container .footer__company li a {
+  display: inline-block;
+  color: #bfbfbf;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.footer .container .footer__features li a:hover,
+.footer .container .footer__resources li a:hover,
+.footer .container .footer__company li a:hover {
+  color: #2acfcf;
+}
+
+.footer .container .footer__features li:first-child,
+.footer .container .footer__resources li:first-child,
+.footer .container .footer__company li:first-child {
+  margin-bottom: 1.875rem;
+}
+
+.footer .container .footer__features li:last-child a,
+.footer .container .footer__resources li:last-child a,
+.footer .container .footer__company li:last-child a {
+  margin-bottom: 0;
+}
+
+.footer .container .footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 1.5rem;
+  width: 11.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1.625rem;
+          column-gap: 1.625rem;
+}
+
+.footer .container .footer__socials img {
+  height: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer .container .footer__socials img:hover {
+  -webkit-filter: invert(88%) sepia(59%) saturate(6394%) hue-rotate(126deg) brightness(86%) contrast(87%);
+          filter: invert(88%) sepia(59%) saturate(6394%) hue-rotate(126deg) brightness(86%) contrast(87%);
+}
+
+.footer .container .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer .container .attribution a {
+  color: white;
+}
+
+.footer .container .attribution a:hover {
+  color: #2acfcf;
+}
+
+@media only screen and (min-width: 900px) {
+  .footer {
+    text-align: left;
+  }
+  .footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2fr 0.5fr;
+    -ms-grid-columns: 2fr (1fr)[3] 1fr;
+        grid-template: 2fr 0.5fr/2fr repeat(3, 1fr) 1fr;
+        grid-template-areas: "logo features resources company socials" "attribution attribution attribution attribution attribution";
+  }
+  .footer .container .footer__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  .footer .container .footer__features {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: features;
+  }
+  .footer .container .footer__features li, .footer .container .footer__features li a {
+    font-size: 1rem;
+  }
+  .footer .container .footer__resources {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: resources;
+  }
+  .footer .container .footer__resources li, .footer .container .footer__resources li a {
+    font-size: 1rem;
+  }
+  .footer .container .footer__company {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: company;
+  }
+  .footer .container .footer__company li, .footer .container .footer__company li a {
+    font-size: 1rem;
+  }
+  .footer .container .footer__socials {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: socials;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .footer .container .attribution {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: attribution;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
 /*# sourceMappingURL=style.css.map */

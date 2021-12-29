@@ -1,0 +1,112 @@
+.footer {
+  background-color: $veryDarkViolet;
+  text-align: center;
+  padding: 3.125rem 0rem;
+  .container {
+    .footer__logo {
+      height: 1.875rem;
+      margin-bottom: 3.125rem;
+    }
+    .footer__features,
+    .footer__resources,
+    .footer__company {
+      margin-bottom: 3.125rem;
+      li {
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 700;
+
+        a {
+          display: inline-block;
+          color: $gray;
+          font-weight: 500;
+          margin-bottom: 1.5rem;
+
+          &:hover {
+            color: $cyan;
+          }
+        }
+      }
+      li:first-child {
+        margin-bottom: 1.875rem;
+      }
+      li:last-child {
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .footer__socials {
+      display: flex;
+      margin: 0 auto 1.5rem;
+      width: 11.25rem;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1.625rem;
+
+      img {
+          height: 1.5rem;
+          object-fit: cover;
+         
+        &:hover {
+          filter: invert(88%) sepia(59%) saturate(6394%) hue-rotate(126deg)
+            brightness(86%) contrast(87%);
+        }
+      }
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: white
+        
+      }
+      .attribution a:hover{
+          color:$cyan;
+      }
+  }
+}
+
+@media only screen and (min-width:900px){
+    .footer{
+        text-align: left;
+        .container{
+            display: grid;
+            grid-template: 2fr 0.5fr / 2fr repeat(3, 1fr) 1fr;
+            grid-template-areas: "logo features resources company socials" "attribution attribution attribution attribution attribution";
+        .footer__logo{
+            grid-area: logo;
+           
+        }
+        .footer__features{
+            grid-area: features;
+            li, li a{
+                font-size: 1rem;
+            }
+        }
+        .footer__resources{
+            grid-area: resources;
+            li, li a{
+                font-size: 1rem;
+            }
+        }
+        .footer__company{
+            grid-area: company;
+            li, li a{
+                font-size: 1rem;
+            }
+        }
+        .footer__socials{
+            grid-area: socials;
+            align-self: start;
+        }
+        .attribution{
+            grid-area: attribution;
+            align-self: end;
+        }
+        }
+    }
+}
