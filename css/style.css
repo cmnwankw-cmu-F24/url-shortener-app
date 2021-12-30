@@ -491,6 +491,7 @@ body {
 .hero .shortener__error {
   display: inline-block;
   grid-area: error;
+  visibility: hidden;
   font-weight: 500;
   font-style: italic;
   font-size: 0.875rem;
@@ -604,7 +605,7 @@ body {
 
 .info {
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: #EFF1F7;
   padding: 7.5rem 0rem 5.625rem;
 }
 
