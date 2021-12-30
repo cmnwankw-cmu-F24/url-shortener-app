@@ -16,6 +16,12 @@
       grid-template-columns: 1fr;
       row-gap: 1.5rem;
       align-items: center;
+
+      #clear_btn:hover{
+        cursor: pointer;
+        color: $veryDarkViolet;
+      }
+
       &__tab {
         width: 100%;
         background-color: white;
@@ -38,6 +44,11 @@
           overflow-x: hidden;
           padding: 1rem 0rem;
           font-size: 1rem;
+        }
+        input[type="text"]{
+          visibility: hidden;
+          width: 0px;
+          height: 0px;
         }
         .copy_btn {
           background-color: $cyan;
@@ -161,7 +172,7 @@
   }
 }
 
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 845px) {
   .info {
     .container {
       .result {
@@ -169,7 +180,7 @@
           display: flex;
           width: min-content;
           align-items: center;
-          column-gap: 2.25rem;
+          column-gap: 1.125rem;
           width: 100%;
 
           .long_link {

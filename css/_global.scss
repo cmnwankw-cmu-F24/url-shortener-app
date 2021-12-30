@@ -20,7 +20,7 @@ a{
 
 //variables
 $cyan: #2acfcf;
-$darkViolet: hsl(257, 27%, 26%);
+$darkViolet: #3b3054;
 $red: hsl(0, 87%, 67%);
 $gray: hsl(0, 0%, 75%);
 $grayishViolet: hsl(257, 7%, 63%);
@@ -50,6 +50,27 @@ body{
     &:hover{
         color:white;
         opacity: 0.6;
+    }
+}
+
+.loader {
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border-top: 0.35rem solid transparent;
+    border-right: 0.35rem solid rgb(100, 247, 185);
+    border-left: 0.35rem solid rgb(100, 247, 185);
+    border-bottom: 0.35rem solid rgb(100, 247, 185);
+    animation: spin 500ms linear infinite;
+  }
+
+  @keyframes spin{
+    to{
+        transform: rotate(1turn);
     }
 }
 

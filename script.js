@@ -43,6 +43,7 @@ let resultPane = document.querySelector('.result');
 
 shortenerBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
+    resultPane.innerHTML = '<div class="loader"></div>'
     shortenUrl(inputUrl.value);
 });
 
@@ -73,6 +74,7 @@ function render(data) {
         let content = `<div class="result__tab">
         <span class="long_link">${info.original_link}</span>
         <span class="short_link">${info.short_link}</span>
+        <input type="text" value="${info.short_link}" />
         <button class="copy_btn">Copy</button>
         </div>`;
 
@@ -83,12 +85,32 @@ function render(data) {
         tmpContents.forEach((cont) => {
             resultPane.innerHTML += cont;
         });
+
+        //add clear all button
+        resultPane.innerHTML += `<div id="clear_btn"> Clear All </div>`;
+
+        //binding event handler to clear button
+        let clear_btn = document.getElementById("clear_btn");
+
+        clear_btn.addEventListener('click',(evt)=>{
+            localStorage.clear();
+            resultPane.innerHTML="";
+        });
+        
+        //binding click event handler to handle copying to clipboard;
+        let copy_btns = document.querySelectorAll('.copy_btn');
+        
+        
+        copy_btns.forEach((copy_btn)=>{
+            copy_btn.addEventListener('click', copyToClipboard);
+        });
         
         localStorage.setItem('contents', JSON.stringify(tmpContents));
 
     } else {
         shortenerError.style.visibility = "visible";
         inputUrl.style.outline = "2px solid red";
+        resultPane.innerHTML="";
 
         //handle all input validation using the api error code
         switch (data['error_code']) {
@@ -130,12 +152,51 @@ function render(data) {
     }
 }
 
+function copyToClipboard(evt){
+    evt.target.style.backgroundColor="#3b3054";
+    evt.target.innerText="Copied!";
+
+    var copyText = evt.target.previousElementSibling;
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+
+}
+
 function intialRender(){
     let tmp = JSON.parse(localStorage.getItem('contents'));
 
-    tmp.forEach((content) => {
-        resultPane.innerHTML += content;
-    })
+    
+    if(tmp.length !== 0){
+        tmp.forEach((content) => {
+            resultPane.innerHTML += content;
+        });
+
+
+        //add clear all button
+        resultPane.innerHTML += `<div id="clear_btn"> Clear All </div>`;
+
+        //binding event handler to clear button
+        let clear_btn = document.getElementById("clear_btn");
+
+        clear_btn.addEventListener('click',(evt)=>{
+            localStorage.clear();
+            resultPane.innerHTML="";
+        });
+        
+        //binding click event handler to handle copying to clipboard;
+        let copy_btns = document.querySelectorAll('.copy_btn');
+        
+        copy_btns.forEach((copy_btn)=>{
+            copy_btn.addEventListener('click', copyToClipboard);
+        });
+    }
+    
 }
 
-intialRender();
+intialRender(); //initial rendering of the resultPane
