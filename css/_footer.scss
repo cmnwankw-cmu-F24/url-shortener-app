@@ -50,6 +50,7 @@
           object-fit: cover;
          
         &:hover {
+          cursor: pointer;
           filter: invert(88%) sepia(59%) saturate(6394%) hue-rotate(126deg)
             brightness(86%) contrast(87%);
         }
