@@ -2,7 +2,7 @@
 
 There comes a time in every web developer's life when they will need to shorten a URL. The reason could be to hide tracking links, make a link fit into a Tweet, make a more memorable link, make a link smaller to put it in print, add branding to a link, run an A/B test, retarget a link for market research, or maybe swap out a link at a later time (link rotation).
 
-Developers wishing to take advantage of URL shortening technology will want to seek out URL Shortener APIs. The solution here provides a convenient interface that integrates nicely with a URL shortening API to provide these functionalities.
+Developers wishing to take advantage of URL shortening technology will want to seek out URL Shortener APIs. The solution here, provides a convenient interface that integrates nicely with a URL shortening API to provide these functionalities.
 
 ## Table of contents
 
