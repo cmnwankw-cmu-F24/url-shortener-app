@@ -97,7 +97,7 @@ function render(data) {
             resultPane.innerHTML = "";
 
             //reinitializing local storage to ensure some data persistence
-            if (typeof (Storage !== undefined)) {
+            if (typeof (Storage) !== undefined) {
                 if (!localStorage.contents) {
                     localStorage.contents = JSON.stringify([]);
                 }
@@ -198,7 +198,7 @@ function intialRender() {
             resultPane.innerHTML = "";
 
             //reinitializing local storage to ensure some data persistence
-            if (typeof (Storage !== undefined)) {
+            if (typeof (Storage) !== undefined) {
                 if (!localStorage.contents) {
                     localStorage.contents = JSON.stringify([]);
                 }
