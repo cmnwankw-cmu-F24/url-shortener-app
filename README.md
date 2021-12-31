@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repo](https://github.com/Minard-NG/url-shortener-app)
+- Live Site URL: [Hosted with Netlify](https://shrtcode.netlify.app/)
 
 ## My process
 
@@ -79,27 +79,30 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Work on more project involving apis and learn more about backend developemnt.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [ShrtCode API Docs](https://shrtco.de/docs/) - ShrtCode is a privacy friendly url shortener that provides a developer's api. This documentation was very useful in getting me up and running with the api.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [How do I store an array in localStorage?](https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage#:~:text=Use%20localStorage.,work%20with%20the%20sessionStorage%20object.) - Yay, got a little hazy in memory, had to use stackoverflow for this.
+
+- [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/) - To ensure styles are consistent on all browsers and also, worry less about the user agent styles that browsers add to the web pages. I used Eric Meyer's standard CSS reset. It was very helpful.
+
+- [Hex to CSS FIlter Generator](https://codepen.io/sosuke/pen/Pjoqqp) - This code is very useful in convert hex color values to css filter values.
+
+- [Top URL Shortener APIs](https://www.programmableweb.com/news/10-top-url-shortener-apis/brief/2020/06/21) - Learnt a lot about ros and cons of different shortening apis from this article.
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Minard-NG](https://www.frontendmentor.io/profile/Minard-NG)
+- LinkedIn - [Michael Nwankwo](https://www.linkedin.com/in/michael-nwankwo/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Special thanks to [Frontend Mentor](https://www.frontendmentor.io) for setting up this challenge to help developers improve their coding skills by building realistic projects.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
