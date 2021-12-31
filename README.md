@@ -48,38 +48,70 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Sass/Scss
 - JavaScript
 - Git & GitHub
 - Mobile-first workflow
-- Shrtcode API
+- ShrtCode API
 
 ### What I learnt
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project did stretch my frontend skills, but I would be focusing on the new things I learnt while building this project.
 
-To see how you can add code snippets, see below:
+How to copy text to the clipboard - I have randomly been thinking about how this functionality is implemented but I finally got a chance to research and implement the functionality in this project. The W3 schools code below explicitly shows the logic behind the implementation.
+
+Code Snippet of the html
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<!-- The text field -->
+<input type="text" value="Hello World" id="myInput">
+
+<!-- The button used to copy the text -->
+<button onclick="myFunction()">Copy text</button>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+For the api integration, I utilized the async/await JS syntax.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Code Snippet, below:
+```js
+async function shortenUrl(url) {
+    let response = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
+
+    let data = await response.json();
+
+    render(data); //render the output data;
+}
+```
+
+At some point in the program's logic, I had to store an array in the localStorage. Here is the code snippet of the code below:
+```js
+let contents = [];
+localStorage.setItem("contents", JSON.stringify(contents));
+
+//...
+let storedContent = JSON.parse(localStorage.getItem("content"));
+```
 
 ### Continued development
 
-Work on more project involving apis and learn more about backend developemnt.
+Work on more web projects involving APIs and learn more about backend developemnt.
 
 
 ### Useful resources
