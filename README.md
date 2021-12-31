@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/desktop-design.jpg)
 
 ### Links
 
@@ -85,13 +85,9 @@ Work on more project involving apis and learn more about backend developemnt.
 ### Useful resources
 
 - [ShrtCode API Docs](https://shrtco.de/docs/) - ShrtCode is a privacy friendly url shortener that provides a developer's api. This documentation was very useful in getting me up and running with the api.
-
 - [How do I store an array in localStorage?](https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage#:~:text=Use%20localStorage.,work%20with%20the%20sessionStorage%20object.) - Yay, got a little hazy in memory, had to use stackoverflow for this.
-
 - [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/) - To ensure styles are consistent on all browsers and also, worry less about the user agent styles that browsers add to the web pages. I used Eric Meyer's standard CSS reset. It was very helpful.
-
 - [Hex to CSS FIlter Generator](https://codepen.io/sosuke/pen/Pjoqqp) - This code is very useful in convert hex color values to css filter values.
-
 - [Top URL Shortener APIs](https://www.programmableweb.com/news/10-top-url-shortener-apis/brief/2020/06/21) - Learnt a lot about ros and cons of different shortening apis from this article.
 
 
