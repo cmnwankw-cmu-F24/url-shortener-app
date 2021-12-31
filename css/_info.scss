@@ -17,10 +17,16 @@
       row-gap: 1.5rem;
       align-items: center;
 
-      #clear_btn:hover{
-        cursor: pointer;
-        color: $veryDarkViolet;
+      #clear_btn{
+        font-size: 1rem;
+        
+        &:hover{
+          cursor: pointer;
+          color: $veryDarkViolet;
+          
+        }
       }
+      
 
       &__tab {
         width: 100%;
@@ -42,7 +48,7 @@
           display: inline-block;
           color: $cyan;
           width: 100%;
-          overflow-x: hidden;
+          overflow: hidden;
           padding: 1rem 0rem;
           font-size: 1rem;
         }

@@ -718,6 +718,10 @@ body {
           align-items: center;
 }
 
+.info .container .result #clear_btn {
+  font-size: 1rem;
+}
+
 .info .container .result #clear_btn:hover {
   cursor: pointer;
   color: #232127;
@@ -728,6 +732,7 @@ body {
   background-color: white;
   padding: 1rem;
   border-radius: 5px;
+  overflow-x: hidden;
 }
 
 .info .container .result__tab .long_link {
@@ -744,7 +749,7 @@ body {
   display: inline-block;
   color: #2acfcf;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 1rem 0rem;
   font-size: 1rem;
 }
