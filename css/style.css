@@ -739,7 +739,7 @@ body {
   display: inline-block;
   width: 100%;
   color: #232127;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0rem 0rem 1rem;
   font-size: 1rem;
   border-bottom: 1px solid #bfbfbf;
