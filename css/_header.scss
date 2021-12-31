@@ -66,13 +66,14 @@
         }
         }
       }
-
-      hr {
-        width: 90%;
-        margin: 0 auto;
-        color: $grayishViolet;
-        height: 1px;
+      li:nth-child(3){
+        margin: 2.5rem auto 0rem;
+        width: 80%;
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid gray;
       }
+
+    
     }
   }
 }

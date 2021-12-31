@@ -172,11 +172,11 @@ body {
   color: white;
 }
 
-.header #mobile__drop-down ul hr {
-  width: 90%;
-  margin: 0 auto;
-  color: #9e9aa7;
-  height: 1px;
+.header #mobile__drop-down ul li:nth-child(3) {
+  margin: 2.5rem auto 0rem;
+  width: 80%;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid gray;
 }
 
 @media only screen and (min-width: 785px) {
